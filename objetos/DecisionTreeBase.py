@@ -4,8 +4,10 @@ from sklearn.tree import DecisionTreeClassifier
 class DecisionTreeBase(object):
 
     def __init__(self, *args, **kwargs):
+        super(DecisionTreeBase, self).__init__(*args, **kwargs)
         self._arbol = DecisionTreeClassifier()
         self._feature_name = []
+        self._target_name = []
         self._x_train = None
         self._x_test = None
         self._y_train = None
