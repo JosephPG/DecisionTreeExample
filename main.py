@@ -18,11 +18,10 @@ class DecisionTreeExample:
     @staticmethod
     def example_first():
         arbol = DecisionTreeFirst()
-        arbol.entrenar_arbol()
-        arbol.imprimir_resultados()
-        arbol.generar_dot()
-        arbol.leer_dot()
-        arbol.barra_feature_important()
+        arbol.imp_score_predict()
+        arbol.imp_predict()
+        arbol.abrir_dot()
+        arbol.graficar_caracteristicas_importantes()
 
 
 if __name__ == '__main__':

@@ -1,16 +1,16 @@
-import matplotlib.pyplot as plt
 import numpy
+import matplotlib.pyplot as plt
+from .DecisionTreeBase import DecisionTreeBase
 
 
-class ManagePlot(object):
+class ManagePlot(DecisionTreeBase):
 
-    def __init__(self):
-        pass
+    def __init__(self, *args, **kwargs):
+        super(ManagePlot, self).__init__(*args, **kwargs)
 
-    def _caracteristicas_importante(self, col_feature, feature_name, arbol):
-        caract = col_feature.shape[1] # Obtiene la cantidad de caracteristicas
-        plt.barh(range(caract), arbol.feature_importances_)  # Genera barra
-        plt.yticks(numpy.arange(caract), feature_name) # Propiedades de Y
+    def _caracteristicas_importante(self, cant_feature):
+        plt.barh(range(cant_feature), self._arbol.feature_importances_)  # Genera barra
+        plt.yticks(numpy.arange(cant_feature), self._feature_name) # Propiedades de Y
         plt.xlabel('Importancia de caracteristicas')
         plt.ylabel('Caracteristica')
         plt.show()
