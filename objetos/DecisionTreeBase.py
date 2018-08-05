@@ -14,9 +14,9 @@ class DecisionTreeBase(object):
         self._y_test = None
 
     def _entrenar_arbol(self):
-        self.arbol.fit(self._x_train, self._y_train)
+        self._arbol.fit(self._x_train, self._y_train)
 
-    def _imp_score_predict(self):
+    def imp_score_predict(self):
         """Porcentaje que asegura cuan seguro puede ser
         acertar la prediccion"""
         train_score_n = self._arbol.score(self._x_train, self._y_train)
@@ -26,7 +26,7 @@ class DecisionTreeBase(object):
         print('Test Score: {}'.format(test_score_n))
         print("====================== \n")
 
-    def _imp_predict(self):
+    def imp_predict(self):
         """Imprime el resultado de la clasificacion"""
         predict_result = self._arbol.predict(self._x_test)
         print("\n ======================")
