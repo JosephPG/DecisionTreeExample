@@ -25,10 +25,3 @@ class DecisionTreeFirst(ManageFileDot, ManagePlot):
             train_test_split(self.__iris.data, self.__iris.target)
         self._entrenar_arbol()
 
-    def abrir_dot(self):
-        self._crear_dot()
-        self._leer_dot()
-
-    def graficar_caracteristicas_importantes(self):
-        self._caracteristicas_importante(self._x_train.shape[1])
-

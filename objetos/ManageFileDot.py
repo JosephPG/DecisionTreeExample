@@ -30,3 +30,7 @@ class ManageFileDot(DecisionTreeBase):
             graf.view()
         except (FileNotFoundError, Exception) as e:
            print('Error en graph')
+
+    def abrir_dot(self):
+        self._crear_dot()
+        self._leer_dot()
