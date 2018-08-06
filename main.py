@@ -21,8 +21,8 @@ class DecisionTreeExample:
         arbol.imp_score_predict()
         arbol.imp_predict()
         arbol.abrir_dot()
-        arbol.graficar_caracteristicas_importantes()
-
+        #arbol.graficar_caracteristicas_importantes()
+        arbol.graficar_clasificacion()
 
 if __name__ == '__main__':
     DecisionTreeExample.main()
