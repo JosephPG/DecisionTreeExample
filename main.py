@@ -17,7 +17,7 @@ class DecisionTreeExample:
 
     @staticmethod
     def example_first():
-        arbol = DecisionTreeFirst()
+        arbol = DecisionTreeFirst(max_depth=3)
         arbol.imp_score_predict()
         arbol.imp_predict()
         arbol.abrir_dot()

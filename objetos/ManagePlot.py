@@ -26,7 +26,7 @@ class ManagePlot(DecisionTreeBase):
                                                 [1,2], [1,3], [2,3]]):
             x = self._x_train[:, pair_column] # Obtiene todas las filas, columnas de la iteracion actual
             y = self._y_train
-            clf = DecisionTreeClassifier().fit(x, y)
+            clf = DecisionTreeClassifier(max_depth=self._max_depth).fit(x, y)
             # Genera un agrupado de 6 graficos con 2 filas y 3 columnas
             # y el ultimo parametro indica la posicion del grafico actual en el agrupado
             plt.subplot(2, 3, pair_num+1)

@@ -3,9 +3,10 @@ from sklearn.tree import DecisionTreeClassifier
 
 class DecisionTreeBase(object):
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, max_depth=None, *args, **kwargs):
         super(DecisionTreeBase, self).__init__(*args, **kwargs)
-        self._arbol = DecisionTreeClassifier()
+        self._max_depth = max_depth
+        self._arbol = DecisionTreeClassifier(max_depth=max_depth)
         self._feature_name = []
         self._target_name = []
         self._x_train = None

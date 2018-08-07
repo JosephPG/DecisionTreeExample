@@ -7,8 +7,10 @@ from sklearn.model_selection import train_test_split
 
 class DecisionTreeFirst(ManageFileDot, ManagePlot):
 
-    def __init__(self, file_name_dot='arbol.dot', *args, **kwargs):
-        super(DecisionTreeFirst, self).__init__(file_name=file_name_dot, *args, **kwargs)
+    def __init__(self, file_name_dot='arbol.dot', max_depth=None, *args, **kwargs):
+        super(DecisionTreeFirst, self).__init__(file_name=file_name_dot,
+                                                max_depth=max_depth,
+                                                *args, **kwargs)
         self.__iris = load_iris()
         self.__cargar_data()
 
