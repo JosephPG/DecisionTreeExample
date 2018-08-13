@@ -22,7 +22,7 @@ class DecisionTreeBase(object):
         acertar la prediccion"""
         train_score_n = self._arbol.score(self._x_train, self._y_train)
         test_score_n = self._arbol.score(self._x_test, self._y_test)
-        print("\n ======================")
+        print("\n======================")
         print('Train Score: {}'.format(train_score_n))
         print('Test Score: {}'.format(test_score_n))
         print("====================== \n")
@@ -30,6 +30,6 @@ class DecisionTreeBase(object):
     def imp_predict(self):
         """Imprime el resultado de la clasificacion"""
         predict_result = self._arbol.predict(self._x_test)
-        print("\n ======================")
+        print("\n======================")
         print('Prediccion: {}'.format(predict_result))
         print("======================\n")

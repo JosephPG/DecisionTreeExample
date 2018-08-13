@@ -16,8 +16,7 @@ class ManageFileDot(DecisionTreeBase):
             export_graphviz(self._arbol, out_file=self._full_path_file,
                             class_names=self._target_name,
                             feature_names=self._feature_name,
-                            impurity=impurity,
-                            filled=filled)
+                            impurity=impurity, filled=filled)
         except Exception as e:
             print('Error in export graph dot:' + str(e))
 
@@ -29,7 +28,7 @@ class ManageFileDot(DecisionTreeBase):
             graf = graphviz.Source(dot_file, directory=self._root_path)
             graf.view()
         except (FileNotFoundError, Exception) as e:
-           print('Error en graph')
+           print('Error en graph: ' + str(e))
 
     def abrir_dot(self):
         self._crear_dot()
